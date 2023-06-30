@@ -1,13 +1,15 @@
-function areBracketsBalanced(str) {
-  let count = 0;
-  for (let i of str) {
-    if (i === "(") count++;
-    if (i === ")") count--;
-    if (count < 0) break;
+function fizzBuzz(begin, end) {
+  for (let i = begin; i <= end; i++) {
+    console.log(
+      i % 3 === 0 && i % 5 === 0
+        ? "FizzBuzz"
+        : i % 3 === 0
+        ? "Fizz"
+        : i % 5 === 0
+        ? "Buzz"
+        : i
+    );
   }
-  return count === 0;
 }
 
-console.log(areBracketsBalanced("(())")); // true
-console.log(areBracketsBalanced("((())")); // false
-console.log(areBracketsBalanced(")((())")); // false
+fizzBuzz(11, 20);
