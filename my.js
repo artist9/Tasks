@@ -1,15 +1,9 @@
-function fizzBuzz(begin, end) {
-  for (let i = begin; i <= end; i++) {
-    console.log(
-      i % 3 === 0 && i % 5 === 0
-        ? "FizzBuzz"
-        : i % 3 === 0
-        ? "Fizz"
-        : i % 5 === 0
-        ? "Buzz"
-        : i
-    );
+function isPerfect(a) {
+  let arr = [];
+  for (let i = 1; i <= a; i++) {
+    if (a % i === 0) arr.push(i);
   }
+  return arr.reduce((a, b) => a + b, 0) === a * 2;
 }
 
-fizzBuzz(11, 20);
+console.log(isPerfect(8128));
