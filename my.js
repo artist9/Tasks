@@ -1,9 +1,11 @@
-function isPerfect(a) {
-  let arr = [];
-  for (let i = 1; i <= a; i++) {
-    if (a % i === 0) arr.push(i);
+function sumSquareDifference(n) {
+  let a = 0;
+  let b = 0;
+  for (let i = 1; i <= n; i++) {
+    a += i ** 2;
+    b += i;
   }
-  return arr.reduce((a, b) => a + b, 0) === a * 2;
+  return b ** 2 - a;
 }
 
-console.log(isPerfect(8128));
+console.log(sumSquareDifference(10));
