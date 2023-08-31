@@ -1,11 +1,13 @@
-function sumSquareDifference(n) {
-  let a = 0;
-  let b = 0;
-  for (let i = 1; i <= n; i++) {
-    a += i ** 2;
-    b += i;
+function ackermann(m, n) {
+  if (m === 0) {
+    return n + 1;
+  } else if (n === 0) {
+    return ackermann(m - 1, 1);
+  } else {
+    return ackermann(m - 1, ackermann(m, n - 1));
   }
-  return b ** 2 - a;
 }
 
-console.log(sumSquareDifference(10));
+console.log(ackermann(0, 0));
+console.log(ackermann(2, 1));
+console.log(ackermann(2, 3));
