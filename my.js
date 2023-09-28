@@ -1,13 +1,8 @@
-function ackermann(m, n) {
-  if (m === 0) {
-    return n + 1;
-  } else if (n === 0) {
-    return ackermann(m - 1, 1);
-  } else {
-    return ackermann(m - 1, ackermann(m, n - 1));
+export default function a(n) {
+  for (let i = 0; i < 10; i++) {
+    n = String(n)
+      .split("")
+      .reduce((a, b) => a + b ** 2, 0);
   }
+  return n === 1;
 }
-
-console.log(ackermann(0, 0));
-console.log(ackermann(2, 1));
-console.log(ackermann(2, 3));
