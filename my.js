@@ -1,8 +1,13 @@
-export default function a(n) {
-  for (let i = 0; i < 10; i++) {
-    n = String(n)
+export default function isHappyTicket(n) {
+  let a = n.length / 2;
+  return (
+    n
       .split("")
-      .reduce((a, b) => a + b ** 2, 0);
-  }
-  return n === 1;
+      .filter((c, d) => d < a)
+      .reduce((a, b) => a + +b, 0) ===
+    n
+      .split("")
+      .filter((c, d) => d >= a)
+      .reduce((a, b) => a + +b, 0)
+  );
 }

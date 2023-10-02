@@ -1,6 +1,7 @@
-import a from "./my.js";
+import isHappyTicket from "./my.js";
 
-console.log(a(7));
-console.log(a(15));
-console.log(a(13));
-console.log(a(6));
+console.log(isHappyTicket("385916")); // true
+console.log(isHappyTicket("231002")); // false
+console.log(isHappyTicket("1222")); // false
+console.log(isHappyTicket("054702")); // true
+console.log(isHappyTicket("00")); // true
