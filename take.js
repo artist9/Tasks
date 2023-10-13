@@ -1,4 +1,5 @@
-import invertCase from "./my.js";
+import isPowerOfThree from "./my.js";
 
-console.log(invertCase("Hello, World!")); // hELLO, wORLD!
-console.log(invertCase("I loVe JS")); // i LOvE js
+console.log(isPowerOfThree(1));
+console.log(isPowerOfThree(2));
+console.log(isPowerOfThree(9));
