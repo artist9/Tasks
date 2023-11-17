@@ -1,8 +1,5 @@
-import cube, { multi, pow, sqrt, sub, sum } from "./math.js";
+import reverseInt from "./my.js";
 
-console.log(sum(3, 5));
-console.log(sqrt(4));
-console.log(pow(2, 4));
-console.log(multi(3));
-console.log(sub(4, 5));
-console.log(cube(5));
+console.log(reverseInt(13)); // 31
+console.log(reverseInt(-123)); // -321
+console.log(reverseInt(8900)); // 98
