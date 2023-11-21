@@ -1,5 +1,6 @@
-export default function reverseInt(n) {
-  return n < 0
-    ? -String(Math.abs(n)).split("").reverse().join("")
-    : Math.abs(String(n).split("").reverse().join(""));
+export default function reverse(str) {
+  if (str === "") return "";
+  let one = str[0];
+  let two = str.slice(1);
+  return reverse(two) + one;
 }
