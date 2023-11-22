@@ -1,4 +1,6 @@
-import reverse from "./my.js";
+import dnaToRna from "./my.js";
 
-console.log(reverse("str")); // rts
-console.log(reverse("hexlet")); // telxeh
+console.log(dnaToRna("ACGTGGTCTTAA")); // 'UGCACCAGAAUU'
+console.log(dnaToRna("CCGTA")); // 'GGCAU'
+console.log(dnaToRna("")); // ''
+console.log(dnaToRna("ACNTG")); // null

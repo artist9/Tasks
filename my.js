@@ -1,6 +1,12 @@
-export default function reverse(str) {
+export default function dnaToRna(str) {
   if (str === "") return "";
-  let one = str[0];
-  let two = str.slice(1);
-  return reverse(two) + one;
+  let res = "";
+  for (let i of str) {
+    if (i === "G") res += "C";
+    else if (i === "C") res += "G";
+    else if (i === "T") res += "A";
+    else if (i === "A") res += "U";
+    else return null;
+  }
+  return res;
 }
