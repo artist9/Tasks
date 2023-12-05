@@ -1,12 +1,7 @@
-export default function dnaToRna(str) {
-  if (str === "") return "";
-  let res = "";
-  for (let i of str) {
-    if (i === "G") res += "C";
-    else if (i === "C") res += "G";
-    else if (i === "T") res += "A";
-    else if (i === "A") res += "U";
-    else return null;
-  }
-  return res;
+export default function formattedTime(n) {
+  const hours = n < 1440 ? Math.floor(n / 60) : Math.floor((n % 1440) / 60);
+  const minutes = n % 60;
+  return `${hours < 10 ? "0" : ""}${hours}:${
+    minutes < 10 ? "0" : ""
+  }${minutes}`;
 }
