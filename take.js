@@ -1,10 +1,6 @@
-import formattedTime from "./my.js";
+import withoutTwoZeros from "./my.js";
 
-console.log(formattedTime(5)); // 00:05
-console.log(formattedTime(15)); // 00:15
-console.log(formattedTime(60)); // 01:00
-console.log(formattedTime(67)); // 01:07
-console.log(formattedTime(175)); // 02:55
-console.log(formattedTime(600)); // 10:00
-console.log(formattedTime(754)); // 12:34
-console.log(formattedTime(1504)); // 01:04
+console.log(withoutTwoZeros(2, 2)); // 3
+console.log(withoutTwoZeros(1, 1)); // 2
+console.log(withoutTwoZeros(1, 3)); // 4
+console.log(withoutTwoZeros(2, 4)); // 10
