@@ -1,6 +1,11 @@
-import withoutTwoZeros from "./my.js";
+import getWeekends from "./my.js";
 
-console.log(withoutTwoZeros(2, 2)); // 3
-console.log(withoutTwoZeros(1, 1)); // 2
-console.log(withoutTwoZeros(1, 3)); // 4
-console.log(withoutTwoZeros(2, 4)); // 10
+// Вывод не показан, так как это равносильно ответу
+
+console.log(getWeekends());
+
+// То же самое что и вызов выше
+
+console.log(getWeekends("long"));
+
+console.log(getWeekends("short"));
