@@ -1,11 +1,9 @@
-import getWeekends from "./my.js";
+import swap from "./my.js";
 
-// Вывод не показан, так как это равносильно ответу
+console.log(swap([])); // []
 
-console.log(getWeekends());
+console.log(swap([1])); // [1]
 
-// То же самое что и вызов выше
+console.log(swap([1, 2])); // [2, 1]
 
-console.log(getWeekends("long"));
-
-console.log(getWeekends("short"));
+console.log(swap(["one", "two", "three"])); // ['three', 'two', 'one']
