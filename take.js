@@ -1,9 +1,10 @@
-import swap from "./my.js";
+import get from "./my.js";
 
-console.log(swap([])); // []
+const cities = ["moscow", "london", "berlin", "porto"];
+console.log(get(cities, 1)); // 'london'
 
-console.log(swap([1])); // [1]
+console.log(get(cities, 4)); // null
 
-console.log(swap([1, 2])); // [2, 1]
+console.log(get(cities, 10, "paris")); // 'paris'
 
-console.log(swap(["one", "two", "three"])); // ['three', 'two', 'one']
+console.log(get(cities, -1, "oops")); // 'oops'
