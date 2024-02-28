@@ -1,10 +1,11 @@
-import get from "./my.js";
+import { revers } from "./my.js";
 
-const cities = ["moscow", "london", "berlin", "porto"];
-console.log(get(cities, 1)); // 'london'
+const names = ["john", "smith", "karl"];
 
-console.log(get(cities, 4)); // null
+revers(names);
 
-console.log(get(cities, 10, "paris")); // 'paris'
+console.log(names); // => ['karl', 'smith', 'john']
 
-console.log(get(cities, -1, "oops")); // 'oops'
+revers(names);
+
+console.log(names); // => ['john', 'smith', 'karl']
