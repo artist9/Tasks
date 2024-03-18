@@ -1,11 +1,17 @@
-import { revers } from "./my.js";
+import makeCensored from "./my.js";
 
-const names = ["john", "smith", "karl"];
+const sentence = "When you play the game of thrones, you win or you die";
 
-revers(names);
+const result = makeCensored(sentence, ["die", "play"]);
 
-console.log(names); // => ['karl', 'smith', 'john']
+console.log(result);
 
-revers(names);
+// When you $#%! the game of thrones, you win or you $#%!
 
-console.log(names); // => ['john', 'smith', 'karl']
+const sentence2 = "chicken chicken? chicken! chicken";
+
+const result2 = makeCensored(sentence2, ["?", "chicken"]);
+
+console.log(result2);
+
+// '$#%! chicken? chicken! $#%!';
