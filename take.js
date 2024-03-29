@@ -1,17 +1,17 @@
-import makeCensored from "./my.js";
+import getSameCount from "./my.js";
 
-const sentence = "When you play the game of thrones, you win or you die";
+// Общие повторяющиеся элементы: 1, 3, 2
 
-const result = makeCensored(sentence, ["die", "play"]);
+console.log(getSameCount([1, 3, 2, 2], [3, 1, 1, 2, 5])); // 3
 
-console.log(result);
+// Общие повторяющиеся элементы: 4
 
-// When you $#%! the game of thrones, you win or you $#%!
+console.log(getSameCount([1, 4, 4], [4, 8, 4])); // 1
 
-const sentence2 = "chicken chicken? chicken! chicken";
+// Общие повторяющиеся элементы: 1, 10
 
-const result2 = makeCensored(sentence2, ["?", "chicken"]);
+console.log(getSameCount([1, 10, 3], [10, 100, 35, 1])); // 2
 
-console.log(result2);
+// Нет элементов
 
-// '$#%! chicken? chicken! $#%!';
+console.log(getSameCount([], [])); // 0
