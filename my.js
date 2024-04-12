@@ -1,9 +1,9 @@
-export default function getSameCount(arr1, arr2) {
-  const set = new Set();
-  for (let i of arr1) {
-    if (arr2.includes(i)) {
-      set.add(i);
-    }
-  }
+export default function countUniqChars(str) {
+  let set = new Set(
+    str
+      .split("")
+      .map((i) => i.toLowerCase())
+      .filter((i) => i != " ")
+  );
   return set.size;
 }
