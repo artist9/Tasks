@@ -1,5 +1,9 @@
-import bubbleSort from "./my.js";
+import isBracketStructureBalanced from "./my.js";
 
-console.log(bubbleSort([]));
+console.log(isBracketStructureBalanced("(>")); // false
 
-console.log(bubbleSort([3, 10, 4, 3]));
+console.log(isBracketStructureBalanced("()")); // true
+
+console.log(isBracketStructureBalanced("[()]")); // true
+
+console.log(isBracketStructureBalanced("{<>}}")); // false

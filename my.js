@@ -1,15 +1,15 @@
-export default function bubbleSort(arr) {
-  let a = arr.length;
-  if (a === 0) return [];
-  do {
-    for (let i = 0; i < a - 1; i++) {
-      if (arr[i] > arr[i + 1]) {
-        let b = arr[i];
-        arr[i] = arr[i + 1];
-        arr[i + 1] = b;
-      }
+export default function isBracketStructureBalanced(str) {
+  const open = ["(", "[", "{", "<"];
+  const close = [")", "]", "}", ">"];
+  const stack = [];
+  for (let i of str) {
+    if (open.includes(i)) {
+      stack.push(i);
+    } else if (close.includes(i)) {
+      const last = stack.pop();
+      const index = close.indexOf(i);
+      if (last !== open[index]) return false;
     }
-    a--;
-  } while (a);
-  return arr;
+  }
+  return stack.length === 0;
 }
