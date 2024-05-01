@@ -1,15 +1,17 @@
-export default function isBracketStructureBalanced(str) {
-  const open = ["(", "[", "{", "<"];
-  const close = [")", "]", "}", ">"];
-  const stack = [];
-  for (let i of str) {
-    if (open.includes(i)) {
-      stack.push(i);
-    } else if (close.includes(i)) {
-      const last = stack.pop();
-      const index = close.indexOf(i);
-      if (last !== open[index]) return false;
+export default function getIntersectionOfSortedArrays(arr1, arr2) {
+  const result = [];
+  let i = 0;
+  let j = 0;
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] === arr2[j]) {
+      result.push(arr1[i]);
+      i++;
+      j++;
+    } else if (arr1[i] < arr2[j]) {
+      i++;
+    } else {
+      j++;
     }
   }
-  return stack.length === 0;
+  return result;
 }

@@ -1,9 +1,9 @@
-import isBracketStructureBalanced from "./my.js";
+import getIntersectionOfSortedArrays from "./my.js";
 
-console.log(isBracketStructureBalanced("(>")); // false
+console.log(
+  getIntersectionOfSortedArrays([10, 11, 24], [10, 13, 14, 18, 24, 30])
+); // [10, 24]
 
-console.log(isBracketStructureBalanced("()")); // true
+console.log(getIntersectionOfSortedArrays([10, 11, 24], [-2, 3, 4])); // []
 
-console.log(isBracketStructureBalanced("[()]")); // true
-
-console.log(isBracketStructureBalanced("{<>}}")); // false
+console.log(getIntersectionOfSortedArrays([], [2])); // []
