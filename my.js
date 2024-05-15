@@ -1,17 +1,18 @@
-export default function getIntersectionOfSortedArrays(arr1, arr2) {
-  const result = [];
-  let i = 0;
-  let j = 0;
-  while (i < arr1.length && j < arr2.length) {
-    if (arr1[i] === arr2[j]) {
-      result.push(arr1[i]);
-      i++;
-      j++;
-    } else if (arr1[i] < arr2[j]) {
-      i++;
-    } else {
-      j++;
+export default function getTheNearestLocation(arr, currentPoint) {
+  if (!arr.length) return null;
+  let point = 0;
+  let min = Infinity;
+  let getDistance = (arr, arr1) => {
+    const [x, y] = arr;
+    const [x1, y1] = arr1;
+    return Math.sqrt((x1 - x) ** 2 + (y1 - y) ** 2);
+  };
+  for (let [name, position] of arr) {
+    let res = getDistance(position, currentPoint);
+    if (res < min) {
+      min = res;
+      point = [name, position];
     }
   }
-  return result;
+  return point;
 }

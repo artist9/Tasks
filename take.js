@@ -1,9 +1,14 @@
-import getIntersectionOfSortedArrays from "./my.js";
+import getTheNearestLocation from "./my.js";
 
-console.log(
-  getIntersectionOfSortedArrays([10, 11, 24], [10, 13, 14, 18, 24, 30])
-); // [10, 24]
+const arr = [
+  ["Park", [10, 5]],
 
-console.log(getIntersectionOfSortedArrays([10, 11, 24], [-2, 3, 4])); // []
+  ["Sea", [1, 3]],
 
-console.log(getIntersectionOfSortedArrays([], [2])); // []
+  ["Museum", [8, 4]],
+];
+
+const currentPoint = [5, 5];
+
+console.log(getTheNearestLocation(arr, currentPoint));
+console.log(getTheNearestLocation([], currentPoint));
