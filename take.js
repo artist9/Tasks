@@ -1,14 +1,9 @@
-import getTheNearestLocation from "./my.js";
+import { flatten } from "./my.js";
 
-const arr = [
-  ["Park", [10, 5]],
+// Для пустого массива возвращается []
 
-  ["Sea", [1, 3]],
+console.log(flatten([])); // []
 
-  ["Museum", [8, 4]],
-];
+console.log(flatten([1, [3, 2], 9])); // [1, 3, 2, 9]
 
-const currentPoint = [5, 5];
-
-console.log(getTheNearestLocation(arr, currentPoint));
-console.log(getTheNearestLocation([], currentPoint));
+console.log(flatten([1, [[2], [3]], [9]])); // [1, [2], [3], 9]
